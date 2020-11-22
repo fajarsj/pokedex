@@ -46,7 +46,7 @@ yarn build
 To run linting, run:
 
 ```
-npm run lint
+yarn lint
 ```
 
 ```
