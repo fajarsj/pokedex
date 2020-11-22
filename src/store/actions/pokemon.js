@@ -32,7 +32,7 @@ export const loadFilterPokemonSuccess = (pokemonType) => {
 export const getPokemon = () => {
   return (dispatch) => {
     axios
-      .get("/pokemon?limit=98")
+      .get("/pokemon?limit=100")
       .then((response) => {
         dispatch(loadPokemonSuccess(response.data));
       })
