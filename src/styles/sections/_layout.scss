@@ -1,0 +1,10 @@
+.layout {
+  &__container {
+    max-width: 1140px;
+    padding: 100px 15px 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+}

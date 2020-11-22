@@ -1,0 +1,38 @@
+.modal {
+  position: fixed;
+  z-index: 1024;
+  width: auto;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  bottom: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: all 250ms ease-out;
+
+  &__dialog {
+    background-color: white;
+    margin: 0.9375rem;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    min-width: 500px;
+    padding: 0.9375rem;
+    position: relative;
+    z-index: 1024;
+
+    @include shadow(3);
+  }
+}
+
+@media (max-width: 576px) {
+  .modal {
+    &__dialog {
+      width: 100%;
+    }
+  }
+}

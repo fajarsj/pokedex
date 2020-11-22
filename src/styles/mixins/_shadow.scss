@@ -1,0 +1,9 @@
+@mixin shadow($level: 1) {
+  @if $level == 1 {
+    box-shadow: 0 3px 13px 1px rgba($black, 0.12);
+  } @else if $level == 2 {
+    box-shadow: 0 5px 20px 0 rgba($black, 0.24);
+  } @else if $level == 3 {
+    box-shadow: 0 27px 24px 0 rgba($black, 0.2);
+  }
+}

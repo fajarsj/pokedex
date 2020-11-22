@@ -1,0 +1,86 @@
+.card {
+  background-color: $light;
+  transition: all 250ms;
+  border-radius: 6px;
+
+  @include shadow(1);
+
+  &:hover {
+    transform: translateY(-5px);
+
+    @include shadow(2);
+  }
+
+  &__header {
+    padding: 0.9375rem 0.9375rem 0;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: $bold-weight;
+    text-transform: capitalize;
+  }
+
+  &__subtitle {
+    font-size: 1.125rem;
+    font-weight: $bold-weight;
+  }
+
+  &--pokemon {
+    .card__subtitle {
+      opacity: 0.15;
+    }
+
+    .card__header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__body {
+    padding: 0.9375rem;
+  }
+
+  &__pokemon {
+    padding: 1.875rem;
+    position: relative;
+    margin: auto;
+    min-height: 170px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("../assets/images/pokemon-ball-bg.png");
+      background-size: cover;
+      opacity: 0.1;
+    }
+
+    img {
+      width: 100%;
+      position: relative;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.9375rem 1.25rem;
+
+  .card {
+    margin: 0 0.9375rem 1.875rem;
+    flex: 1 1;
+    cursor: pointer;
+    width: 15%;
+    min-width: 15%;
+
+    &__title {
+      font-size: 1.25rem;
+    }
+  }
+}

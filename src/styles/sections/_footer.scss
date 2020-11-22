@@ -1,0 +1,11 @@
+.footer {
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+
+  &__author {
+    i {
+      color: $love;
+    }
+  }
+}

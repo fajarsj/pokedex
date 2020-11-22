@@ -1,0 +1,13 @@
+html * {
+  font-family: "Lato", sans-serif;
+  font-weight: $normal-weight;
+  color: $black;
+}
+
+body {
+  background-color: $light-100;
+}
+
+a {
+  color: inherit;
+}

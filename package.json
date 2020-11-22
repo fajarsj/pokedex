@@ -1,0 +1,76 @@
+{
+  "name": "assignment-warung-pintar",
+  "version": "1.0.0",
+  "description": "Pokemon Gallery wih React for Warung Pintar Assignment",
+  "main": "''",
+  "scripts": {
+    "clean": "shx rm -rf build",
+    "webpack": "webpack --config config/webpack.config.production.js",
+    "sass": "node-sass src/styles/index.scss build/index.css --output-style compressed",
+    "build": "npm run clean && npm run sass && npm run webpack",
+    "lint": "eslint src config",
+    "dev": "webpack-cli serve --mode development --config config/webpack.config.dev.js",
+    "test": "set NODE_ENV=test && jest",
+    "start": "serve -s build"
+  },
+  "author": "Fajar SJ",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "autoprefixer": "^10.0.2",
+    "axios": "^0.21.0",
+    "babel-loader": "^8.2.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "copy-webpack-plugin": "^6.3.2",
+    "css-loader": "^5.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "file-loader": "^5.1.0",
+    "history": "^4.10.1",
+    "html-webpack-plugin": "^4.5.0",
+    "jest": "^24.9.0",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^10.1.0",
+    "serve": "^11.3.2",
+    "shx": "^0.3.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "jest": {
+    "verbose": true,
+    "bail": true,
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "moduleNameMapper": {
+      "\\.(jpe?g|png|gif|eot|otf|webp|svg|ttf|woff2?|mp[34]|webm|wav|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less|s[ac]ss|styl)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-standard": "^4.1.0"
+  }
+}

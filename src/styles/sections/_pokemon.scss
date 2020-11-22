@@ -1,0 +1,70 @@
+.pokemon {
+  &__thumbnail {
+    &__image {
+      width: 250px;
+      display: block;
+      animation: bounce 0.8s ease infinite;
+      left: 50%;
+      top: 50%;
+      position: relative;
+    }
+  }
+
+  &__name {
+    margin-top: calc(-125px + 1.875rem);
+    font-weight: $bold-weight;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.25rem;
+    text-transform: capitalize;
+  }
+
+  &__stats {
+    display: inline-flex;
+    margin-bottom: 0.9375rem;
+
+    &__item {
+      padding: 0 1.875rem;
+      border-right: 1px solid $light-200;
+
+      &:last-child {
+        border-right-width: 0;
+      }
+
+      &__title,
+      &__description {
+        text-align: center;
+      }
+
+      &__title {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      &__description {
+        font-size: 1.25rem;
+        font-weight: $bold-weight;
+      }
+    }
+  }
+
+  &__badge {
+    padding: 0.4rem 0.75rem;
+    border-radius: 10rem;
+    background-color: $primary;
+    color: $light;
+    margin-bottom: 1.875rem;
+    display: inline-block;
+    font-weight: $bold-weight;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-50%) translateX(-50%) scaleX(1) scaleY(1);
+  }
+  50% {
+    transform: translateY(-60%) translateX(-50%) scaleX(0.95) scaleY(1.03);
+  }
+}
