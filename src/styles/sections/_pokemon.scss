@@ -68,7 +68,11 @@
     }
 
     &__name {
-      margin-top: calc(-100px + 1.875rem);
+      margin-top: calc(-100px + 0.9375rem);
+    }
+
+    &__badge {
+      margin-bottom: 0.9375rem;
     }
 
     &__stats {

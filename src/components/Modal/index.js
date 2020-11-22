@@ -14,7 +14,13 @@ const Modal = (props) => {
           opacity: show ? "1" : "0",
         }}
       >
-        <div className="modal__dialog">{children}</div>
+        <div className="modal__dialog">
+          {children}
+          <i
+            className="las la-times-circle modal__dialog__close"
+            onClick={modalClosed}
+          />
+        </div>
       </div>
     </Fragment>
   );
