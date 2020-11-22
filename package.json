@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Pokemon Gallery wih React for Warung Pintar Assignment",
   "main": "''",
+  "engines": {
+    "node": "12.19.0"
+  },
   "scripts": {
     "clean": "shx rm -rf build",
     "webpack": "webpack --config config/webpack.config.production.js",
