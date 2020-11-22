@@ -1,10 +1,18 @@
 .header {
-  display: flex;
-  align-items: center;
   margin-bottom: 1.25rem;
 
   &__title {
     font-weight: $black-weight;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    margin-bottom: 1.875rem;
+
+    &__title {
+      margin: auto;
+    }
   }
 }

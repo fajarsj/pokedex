@@ -59,6 +59,39 @@
   }
 }
 
+@media (max-width: 767.98px) {
+  .pokemon {
+    &__thumbnail {
+      &__image {
+        width: 200px;
+      }
+    }
+
+    &__name {
+      margin-top: calc(-100px + 1.875rem);
+    }
+
+    &__stats {
+      flex-wrap: wrap;
+
+      &__item {
+        padding: 0.9375rem;
+        width: 50%;
+
+        &:first-child {
+          width: 100%;
+          border-bottom: 1px solid $light-200;
+        }
+
+        &:last-child,
+        &:first-child {
+          border-right-width: 0;
+        }
+      }
+    }
+  }
+}
+
 @keyframes bounce {
   0%,
   100% {
