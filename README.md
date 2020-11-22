@@ -22,10 +22,14 @@ Then you can follow this step:
 1. Open your terminal/command line, and type
 2. _git clone git@github.com:FajarSJ/pokedex.git_
 3. Navigate to this (pokedex) repository folder, and on your terminal/command line type
-4. _yarn install_, then to run the program type
-5. _yarn dev_
+4. _yarn install_
 
-Open the browser and navigato to `http://localhost:8080/`
+## Running the Program
+
+After the installation, on your terminal/command line type
+
+1. _yarn dev_, and then open `http://localhost:8080/` on your browser
+2. [Or you can access this link](https://pokedex-fsj.herokuapp.com/)
 
 ### To test
 
