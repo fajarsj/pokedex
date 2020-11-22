@@ -2,7 +2,7 @@
 
 [https://pokedex-fsj.herokuapp.com/](https://pokedex-fsj.herokuapp.com/) This program is only example for take home assignment interview.
 
-`Note: This program already running well in most of browsers and responsive on Ipad, Ipad Pro and Iphone X`
+`Note: This program already tested and running well in most of browsers and responsive especially on Ipad, Ipad Pro and Iphone X`
 
 ## Getting Started
 
