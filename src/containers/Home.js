@@ -9,7 +9,7 @@ import CardList from "../components/CardList";
 import Modal from "../components/Modal";
 import DetailPokemon from "../components/DetailPokemon";
 import Spinner from "../components/Spinner";
-import withErrorHandler from "../hoc/withErrorHandler";
+import withErrorHandler from "../hoc/WithErrorHandlerr";
 import * as actions from "../store/actions/index";
 import axios from "../shared/AxiosOrder";
 
