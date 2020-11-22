@@ -1,18 +1,27 @@
 .button {
+  padding: 0.75rem 1.875rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-decoration: none;
+  letter-spacing: 0;
+  border-radius: 6px;
+  border-width: 0;
+  outline-width: 0;
+  color: #fff;
+
   &--primary {
-    color: #fff;
     background-color: $primary;
     border-color: $primary;
     box-shadow: 0 2px 2px 0 rgba($primary, 0.14),
       0 3px 1px -2px rgba($primary, 0.2), 0 1px 5px 0 rgba($primary, 0.12);
-    padding: 0.75rem 1.875rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    text-decoration: none;
-    letter-spacing: 0;
-    border-radius: 6px;
-    border-width: 0;
-    outline-width: 0;
+    cursor: pointer;
+  }
+
+  &--success {
+    background-color: $success;
+    border-color: $success;
+    box-shadow: 0 2px 2px 0 rgba($success, 0.14),
+      0 3px 1px -2px rgba($success, 0.2), 0 1px 5px 0 rgba($success, 0.12);
     cursor: pointer;
   }
 

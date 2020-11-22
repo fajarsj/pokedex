@@ -32,6 +32,10 @@ class Home extends Component {
     this.setState({ searchFilter: event.target.value });
   };
 
+  resetSearchFilterHandler = () => {
+    this.props.onGetPokemon();
+  };
+
   searchFilterHandler = () => {
     this.props.onGetFilterPokemon(this.state.searchFilter.toLowerCase());
   };
@@ -75,9 +79,17 @@ class Home extends Component {
             changed={(event) => this.searchFilterChangedHandler(event)}
           />
           <Button
+            clicked={this.resetSearchFilterHandler}
+            type="button"
+            variant="success"
+          >
+            Reset
+          </Button>
+          <Button
             clicked={this.searchFilterHandler}
             type="button"
             disabled={this.state.searchFilter ? false : true}
+            variant="primary"
           >
             Search
           </Button>

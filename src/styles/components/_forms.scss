@@ -28,8 +28,12 @@
     display: flex;
     margin-bottom: 3.125rem;
 
-    .input {
+    > * {
       margin-right: 0.9375rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -39,8 +43,13 @@
     &--filter {
       flex-direction: column;
 
-      .input {
+      > * {
+        margin-right: 0;
         margin-bottom: 0.9375rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
