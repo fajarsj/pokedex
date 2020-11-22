@@ -33,3 +33,15 @@
     }
   }
 }
+
+@media (max-width: 767.98px) {
+  .form {
+    &--filter {
+      flex-direction: column;
+
+      .input {
+        margin-bottom: 0.9375rem;
+      }
+    }
+  }
+}

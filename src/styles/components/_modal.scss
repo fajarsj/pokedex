@@ -29,10 +29,13 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 767.98px) {
   .modal {
+    width: 100%;
+    left: 0;
     &__dialog {
       width: 100%;
+      min-width: 100%;
     }
   }
 }

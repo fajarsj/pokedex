@@ -84,3 +84,52 @@
     }
   }
 }
+
+@media (max-width: 1199.98px) {
+  .cards {
+    .card {
+      width: 20%;
+      min-width: 20%;
+
+      &__pokemon {
+        padding: 0.9375rem;
+        min-height: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .cards {
+    .card {
+      width: 25%;
+      min-width: 25%;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cards {
+    .card {
+      width: 40%;
+      min-width: 40%;
+      margin: 0 0.4678rem 0.9375rem;
+
+      &:nth-child(odd) {
+        margin-left: 0.9375rem;
+      }
+
+      &:nth-child(even) {
+        margin-right: 0.9375rem;
+      }
+
+      &__title {
+        font-size: 1rem;
+      }
+
+      &__subtitle {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}
