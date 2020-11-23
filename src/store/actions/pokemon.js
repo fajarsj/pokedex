@@ -15,6 +15,12 @@ export const loadPokemonFailed = () => {
   };
 };
 
+export const loadDetailPokemonRequest = () => {
+  return {
+    type: actionTypes.LOAD_DETAIL_POKEMON_REQUEST,
+  };
+};
+
 export const loadDetailPokemonSuccess = (pokemon) => {
   return {
     type: actionTypes.LOAD_DETAIL_POKEMON_SUCCESS,
@@ -52,6 +58,8 @@ export const getDetailPokemon = (url) => {
   const pokemonId = lastURLsegment(url);
 
   return (dispatch) => {
+    dispatch(loadDetailPokemonRequest());
+
     axios
       .get(`/pokemon/${pokemonId}`)
       .then((response) => {

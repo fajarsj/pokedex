@@ -65,14 +65,20 @@ class Home extends Component {
       );
     }
 
+    if (this.props.detailPokemon) {
+      pokemonDetail = <DetailPokemon data={this.props.detailPokemon} />;
+    }
+
     if (this.props.isLoadingFilter) {
       pokemon = <Spinner />;
     } else if (this.props.isLoadingFilter && this.props.error) {
       pokemon = <Spinner error />;
     }
 
-    if (this.props.detailPokemon) {
-      pokemonDetail = <DetailPokemon data={this.props.detailPokemon} />;
+    if (this.props.isLoadingDetail) {
+      pokemonDetail = <Spinner />;
+    } else if (this.props.isLoadingDetail && this.props.error) {
+      pokemonDetail = <Spinner error />;
     }
 
     return (
@@ -113,6 +119,7 @@ const mapStateToProps = (state) => {
   return {
     pokemon: state.pokemon.pokemon,
     isLoadingFilter: state.pokemon.isLoadingFilter,
+    isLoadingDetail: state.pokemon.isLoadingDetail,
     detailPokemon: state.pokemon.detailPokemon,
     error: state.pokemon.error,
   };
