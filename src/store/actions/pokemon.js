@@ -22,6 +22,12 @@ export const loadDetailPokemonSuccess = (pokemon) => {
   };
 };
 
+export const loadFilterPokemonRequest = () => {
+  return {
+    type: actionTypes.LOAD_FILTER_POKEMON_REQUEST,
+  };
+};
+
 export const loadFilterPokemonSuccess = (pokemonType) => {
   return {
     type: actionTypes.LOAD_FILTER_POKEMON_SUCCESS,
@@ -32,7 +38,7 @@ export const loadFilterPokemonSuccess = (pokemonType) => {
 export const getPokemon = () => {
   return (dispatch) => {
     axios
-      .get("/pokemon?limit=999")
+      .get("/pokemon?limit=893")
       .then((response) => {
         dispatch(loadPokemonSuccess(response.data));
       })
@@ -59,6 +65,8 @@ export const getDetailPokemon = (url) => {
 
 export const getFilterPokemon = (type) => {
   return (dispatch) => {
+    dispatch(loadFilterPokemonRequest());
+
     axios
       .get(`/type/${type}`)
       .then((response) => {

@@ -65,6 +65,12 @@ class Home extends Component {
       );
     }
 
+    if (this.props.isLoadingFilter) {
+      pokemon = <Spinner />;
+    } else if (this.props.isLoadingFilter && this.props.error) {
+      pokemon = <Spinner error />;
+    }
+
     if (this.props.detailPokemon) {
       pokemonDetail = <DetailPokemon data={this.props.detailPokemon} />;
     }
@@ -74,7 +80,7 @@ class Home extends Component {
         <Header />
         <div className="form form--filter">
           <Input
-            placeholder="Search Pokemon Types"
+            placeholder='Search Pokemon Types, e.g "Ground", "Flying" etc'
             value={this.state.searchFilter}
             changed={(event) => this.searchFilterChangedHandler(event)}
           />
@@ -106,6 +112,7 @@ class Home extends Component {
 const mapStateToProps = (state) => {
   return {
     pokemon: state.pokemon.pokemon,
+    isLoadingFilter: state.pokemon.isLoadingFilter,
     detailPokemon: state.pokemon.detailPokemon,
     error: state.pokemon.error,
   };

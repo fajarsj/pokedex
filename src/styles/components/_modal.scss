@@ -36,6 +36,14 @@
 
     @include shadow(3);
   }
+
+  &__message {
+    font-size: 1.125rem;
+
+    &--error {
+      color: $primary;
+    }
+  }
 }
 
 @media (max-width: 767.98px) {

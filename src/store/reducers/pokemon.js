@@ -3,7 +3,7 @@ import { updateObject } from "../../shared/Utillity";
 
 const initialState = {
   pokemon: null,
-  loading: false,
+  isLoadingFilter: false,
   error: false,
   detailPokemon: null,
 };
@@ -12,6 +12,7 @@ const loadPokemonSuccess = (state, action) => {
   return updateObject(state, {
     pokemon: action.pokemon.results,
     error: false,
+    isLoading: false,
   });
 };
 
@@ -19,6 +20,7 @@ const loadDetailPokemonSuccess = (state, action) => {
   return updateObject(state, {
     detailPokemon: action.pokemon,
     error: false,
+    isLoading: false,
   });
 };
 
@@ -26,11 +28,16 @@ const loadFilterPokemonSuccess = (state, action) => {
   return updateObject(state, {
     pokemon: action.pokemonType.pokemon,
     error: false,
+    isLoadingFilter: false,
   });
 };
 
-const loadPokemonFailed = (state, action) => {
-  return updateObject(state, { error: true });
+const loadPokemonFailed = (state) => {
+  return updateObject(state, { error: true, isLoadingFilter: false });
+};
+
+const loadFilterPokemonRequest = (state) => {
+  return updateObject(state, { isLoadingFilter: true });
 };
 
 const reducer = (state = initialState, action) => {
@@ -39,6 +46,8 @@ const reducer = (state = initialState, action) => {
       return loadPokemonSuccess(state, action);
     case actionTypes.LOAD_DETAIL_POKEMON_SUCCESS:
       return loadDetailPokemonSuccess(state, action);
+    case actionTypes.LOAD_FILTER_POKEMON_REQUEST:
+      return loadFilterPokemonRequest(state, action);
     case actionTypes.LOAD_FILTER_POKEMON_SUCCESS:
       return loadFilterPokemonSuccess(state, action);
     case actionTypes.LOAD_POKEMON_FAILED:

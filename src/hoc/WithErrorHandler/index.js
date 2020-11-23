@@ -31,13 +31,31 @@ const WithErrorHandler = (WrappedComponent, axios) => {
     };
 
     render() {
+      let errorMessage = null;
+
+      if (
+        this.state.error &&
+        this.state.error.message === "Request failed with status code 404"
+      ) {
+        errorMessage = "Pokemon Not Found :(";
+      }
+
+      if (
+        this.state.error &&
+        this.state.error.message !== "Request failed with status code 404"
+      ) {
+        errorMessage = this.state.error.message;
+      }
+
       return (
         <Fragment>
           <Modal
             show={this.state.error}
             modalClosed={this.errorConfirmedHandler}
           >
-            {this.state.error ? this.state.error.message : null}
+            <p className="modal__message modal__message--error">
+              {errorMessage}
+            </p>
           </Modal>
           <WrappedComponent {...this.props} />
         </Fragment>
