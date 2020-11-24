@@ -54,7 +54,7 @@ class Home extends Component {
           {this.props.pokemon.map((pokemon) => (
             <Card
               clicked={() =>
-                this.openModalHandler(pokemon.url || pokemon.pokemon.ur)
+                this.openModalHandler(pokemon.url || pokemon.pokemon.url)
               }
               title={pokemon.name || pokemon.pokemon.name}
               url={pokemon.url || pokemon.pokemon.url}
