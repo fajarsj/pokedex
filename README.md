@@ -1,7 +1,5 @@
 # Fajar Saputro Juliantoro "Pokedex"
 
-[https://pokedex-fsj.herokuapp.com/](https://pokedex-fsj.herokuapp.com/) This program is only example for take home assignment interview.
-
 ## Getting Started
 
 These instructions will tell you how to running the program on your local machine for testing purposes.
