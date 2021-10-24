@@ -53,4 +53,4 @@ To run linting, run:
 yarn lint
 ```
 
-### Thank you
+### Thank you 🙇‍♂️
