@@ -16,7 +16,7 @@ const Card = (props) => {
           <img
             className="card__pokemon__image"
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`}
-            alt="Pokemon"
+            alt={`${title} picture`}
             loading="lazy"
           />
         </div>
