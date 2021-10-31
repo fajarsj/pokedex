@@ -21,7 +21,7 @@ const DetailPokemon = (props) => {
       <div className="pokemon__thumbnail">
         <img
           className="pokemon__thumbnail__image"
-          src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
         />
       </div>
       <h5 className="pokemon__name">{name}</h5>

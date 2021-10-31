@@ -15,7 +15,7 @@ const Card = (props) => {
         <div className="card__pokemon">
           <img
             className="card__pokemon__image"
-            src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonId}.png`}
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonId}.png`}
             alt="Pokemon"
             loading="lazy"
           />
