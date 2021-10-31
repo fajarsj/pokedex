@@ -22,6 +22,7 @@ const DetailPokemon = (props) => {
         <img
           className="pokemon__thumbnail__image"
           src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}
+          alt={`${title} picture`}
         />
       </div>
       <h5 className="pokemon__name">{name}</h5>
