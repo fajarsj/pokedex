@@ -27,7 +27,6 @@ Then you can follow this step:
 After the installation, on your terminal/command line type
 
 1. _yarn dev_, and then open `http://localhost:8080/` on your browser
-2. [Or you can access this link](https://pokedex-fsj.herokuapp.com/)
 
 ### To test
 
